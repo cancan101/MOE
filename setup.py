@@ -233,6 +233,6 @@ setup(name='MOE',
       """,
       paster_plugins=['pyramid'],
       cmdclass={
-          'install': InstallCppComponents,
+          # 'install': InstallCppComponents,
           },
       )

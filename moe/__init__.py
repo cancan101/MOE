@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 """Base pyramid app for MOE."""
-from pyramid.config import Configurator
 
 from moe.resources import Root
 from moe.views.constant import ALL_MOE_ROUTES
@@ -19,6 +18,8 @@ __version__ = "{0:d}.{1:d}.{2:d}".format(MAJOR, MINOR, PATCH)
 
 
 def main(global_config, **settings):
+    from pyramid.config import Configurator
+
     """Return a WSGI application."""
     config = Configurator(settings=settings, root_factory=Root)
     config.include('pyramid_mako')
